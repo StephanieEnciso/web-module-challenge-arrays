@@ -115,10 +115,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(flavors){
-   flavors.unshift("Rainbow Sherbert")
-   return flavors
-}console.log(addFlavor(copy()))
+function addFlavor(originalFlavors){
+   originalFlavors.unshift("Rainbow Sherbert")
+   return originalFlavors
+}console.log(addFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -132,10 +132,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(flavors){
-  flavors.pop()
-   return flavors;
-}console.log(removeLastFlavor(copy()))
+function removeLastFlavor(originalFlavors){
+   originalFlavors.pop()
+   return originalFlavors;
+}console.log(removeLastFlavor(originalFlavors))
 
 
 
@@ -149,9 +149,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(flavors, num){
-    return flavors[2];
-}console.log(getFlavorByIndex(copy(),2))
+function getFlavorByIndex(originalFlavors, num){
+    return originalFlavors[2];
+}console.log(getFlavorByIndex(originalFlavors,2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -168,17 +168,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(flavors,removed){
+function removeFlavorByName(originalFlavors,removed){
     
-    for (let i in flavors){
-        if(flavors[i]===removed){
-            flavors.splice(i,1);
-        }
-        return flavors
+    for (let i=0; i < originalFlavors.length; i++){
+        if (originalFlavors[i]===removed){
+            originalFlavors.splice(i,1)
+        } 
     }
-   
+    return originalFlavors;
 
-}console.log(removeFlavorByName(copy(),"Banana Nut Fudge"))
+}console.log(removeFlavorByName(originalFlavors,"Rocky Road"))
 
 
 
@@ -201,9 +200,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
+function filterByWord(flavors,yum){
+    var yumFlavors = []
+   for (let i = 0; i < flavors.length; i++){
+       var many = flavors[i]
+       if (flavors[i].includes(yum)){
+           yumFlavors.push(flavors[i]);
+
+       }
+   } return yumFlavors;
+}console.log(originalFlavors,"Chocolate");
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
