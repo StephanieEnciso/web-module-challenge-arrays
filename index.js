@@ -45,9 +45,42 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(yummy){
+    const originalFlavors = [
+        "Banana Nut Fudge",
+        "Black Walnut",
+        "Burgundy Cherry",
+        "Butterscotch Ribbon",
+        "Cherry Macaron",
+        "Chocolate",
+        "Chocolate Almond",
+        "Chocolate Chip",
+        "Chocolate Fudge",
+        "Chocolate Mint",
+        "Chocolate Ribbon",
+        "Coffee",
+        "Coffee Candy",
+        "Date Nut",
+        "Eggnog",
+        "French Vanilla",
+        "Green Mint Stick",
+        "Lemon Crisp",
+        "Lemon Custard",
+        "Lemon Sherbet",
+        "Maple Nut",
+        "Orange Sherbet",
+        "Peach",
+        "Peppermint Fudge Ribbon",
+        "Peppermint Stick",
+        "Pineapple Sherbet",
+        "Raspberry Sherbet",
+        "Rocky Road",
+        "Strawberry",
+        "Vanilla",
+        "Vanilla Burnt Almond"
+    ];
+    return originalFlavors;
+}copy(1)    
 
 
 
